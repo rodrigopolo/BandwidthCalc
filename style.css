@@ -1,0 +1,7 @@
+body > .container {
+	padding: 60px 15px 0;
+}
+
+table td, table th{
+    text-align: center;
+}

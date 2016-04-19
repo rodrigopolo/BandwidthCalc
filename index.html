@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="description" content="Bandwidth Calculator">
+		<meta name="author" content="Rodrigo Polo">
+
+		<title>Bandwidth Calculator</title>
+
+		<!-- Bootstrap -->
+		<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<link href="//maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Bandwidth Calc</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="http://rodrigopolo.com/contact">Contact</a></li>
+
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+
+
+		<div class="container">
+
+			<h3>Bandwidth Calc</h3>
+			<p>Enter the file size of the file you want to transfer (upload or download), then the size prefix, then select the base, usually Windows measures bytes using a 1024 base, OS X uses a 1000 base, then enter your connection speed and measurement, the result is the amount of time for your transmission.</p>
+
+			<form>
+
+				<div class="form-group">
+					<label for="file">File size</label>
+					<div class="row">
+						<div class="col-xs-4">
+							<input type="text" class="form-control" id="file" placeholder="500" value="500">
+						</div>
+						<div class="col-xs-4">
+							<select class="form-control" id="exponent">
+								<option value="0">B</option>
+								<option value="1">KB</option>
+								<option value="2" selected>MB</option>
+								<option value="3">GB</option>
+								<option value="4">TB</option>
+							</select>
+						</div>
+						<div class="col-xs-4">
+							<select class="form-control" id="base">
+								<option value="1024">Base 1024 - Windows</option>
+								<option value="1000">Base 1000 - Mac</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="bandwidth">Connection speed</label>
+					<div class="row">
+						<div class="col-xs-6">
+							<input type="text" class="form-control" id="bandwidth" placeholder="5" value="5">
+						</div>
+						<div class="col-xs-6">
+							<select class="form-control" id="sufix">
+								<option value="1000">Kbps</option>
+								<option value="1000000" selected>Mbps</option>
+							</select>
+						</div>
+					</div>
+
+				</div>
+				<div id="result"></div>
+			</form>
+
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted">&copy; <a href="http://RodrigoPolo.com">RodrigoPolo.com</a></p>
+			</div>
+		</footer>
+
+		<!-- JS -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="main.js"></script>
+		
+	</body>
+</html>
