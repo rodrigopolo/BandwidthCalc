@@ -3,6 +3,10 @@
 A simple HTML/Bootstrap/JavaScript Bandwidth calculator.
 
 [Demo](http://rodrigopolo.github.io/BandwidthCalc/)
+-------
+
+### Donations
+[PayPal](http://paypal.me/rodrigopolo)
 
 -------
 
